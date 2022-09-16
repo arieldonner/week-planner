@@ -3,17 +3,13 @@
   margin: 0 auto;
 }
 
-.row {
+/* .row {
   display: flex;
-}
+} */
 
-.column-full {
-  width: 100%;
-}
-
-.button-flex {
+/* .button-flex {
   display: flex;
-}
+} */
 
 .hidden {
   display: none !important;
