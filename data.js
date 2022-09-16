@@ -5,7 +5,9 @@ var data = {
 };
 
 var previousTodosJSON = localStorage.getItem('javascript-local-storage');
-data = JSON.parse(previousTodosJSON);
+if (previousTodosJSON !== null) {
+  data = JSON.parse(previousTodosJSON);
+}
 
 window.addEventListener('beforeunload', function () {
   var todosJSON = JSON.stringify(data);

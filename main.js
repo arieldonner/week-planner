@@ -25,6 +25,23 @@ function handleAddEntry(event) {
   $modal.className = 'overlay';
 }
 
+var $time1 = document.querySelector('.time1');
+var $description1 = document.querySelector('.desc1');
+var $time2 = document.querySelector('.time2');
+var $description2 = document.querySelector('.desc2');
+var $time3 = document.querySelector('.time3');
+var $description3 = document.querySelector('.desc3');
+var $time4 = document.querySelector('.time4');
+var $description4 = document.querySelector('.desc4');
+var $time5 = document.querySelector('.time5');
+var $description5 = document.querySelector('.desc5');
+var $time6 = document.querySelector('.time6');
+var $description6 = document.querySelector('.desc6');
+var $time7 = document.querySelector('.time7');
+var $description7 = document.querySelector('.desc7');
+var $time8 = document.querySelector('.time8');
+var $description8 = document.querySelector('.desc8');
+
 $entryForm.addEventListener('submit', handleEntrySubmit);
 function handleEntrySubmit(event) {
   event.preventDefault();
@@ -40,14 +57,22 @@ function handleEntrySubmit(event) {
 
   data.entries.push(entryDay);
 
-  if ($td1.textContent !== null) {
-    $td1.textContent = data.entries[0].Time;
-    $td2.textContent = data.entries[0].Description;
-  } else if ($td) { $entryForm.reset(); }
+  if ($time1.textContent !== null) {
+    $time1.textContent = data.entries[0].Time;
+    $description1.textContent = data.entries[0].Description;
+  } else if ($time2.textContent !== null) {
+    $time2.textContent = data.entries[1].Time;
+    $description2.textContent = data.entries[1].Description;
+  } else if ($time3.textContent !== null) {
+    $time3.textContent = data.entries[2].Time;
+    $description3.textContent = data.entries[2].Description;
+  } else if ($time4.textContent !== null) {
+    $time4.textContent = data.entries[3].Time;
+    $description4.textContent = data.entries[3].Description;
+  } else {
+    $entryForm.reset();
+  }
 }
-
-var $td1 = document.querySelector('.time1');
-var $td2 = document.querySelector('.desc1');
 
 var $daysForm = document.querySelector('.days-buttons');
 $daysForm.addEventListener('click', handleClick);
