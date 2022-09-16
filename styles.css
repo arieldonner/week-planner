@@ -122,6 +122,10 @@ textarea {
   text-align: left;
 }
 
+.update-btn {
+  text-align: right;
+}
+
 th {
   background-color: #ccc;
 }

@@ -57,21 +57,28 @@ function handleEntrySubmit(event) {
 
   data.entries.push(entryDay);
 
-  if ($time1.textContent !== null) {
-    $time1.textContent = data.entries[0].Time;
-    $description1.textContent = data.entries[0].Description;
-  } else if ($time2.textContent !== null) {
-    $time2.textContent = data.entries[1].Time;
-    $description2.textContent = data.entries[1].Description;
-  } else if ($time3.textContent !== null) {
-    $time3.textContent = data.entries[2].Time;
-    $description3.textContent = data.entries[2].Description;
-  } else if ($time4.textContent !== null) {
-    $time4.textContent = data.entries[3].Time;
-    $description4.textContent = data.entries[3].Description;
-  } else {
-    $entryForm.reset();
+  var $tableEL = document.querySelector('table').rows;
+
+  for (var i = 1; i < $tableEL.length; i++) {
+    $tableEl.splice(i, 1);
+
   }
+
+  // if ($time1.textContent !== null) {
+  //   $time1.textContent = data.entries[0].Time;
+  //   $description1.textContent = data.entries[0].Description;
+  // } else if ($time2.textContent !== null) {
+  //   $time2.textContent = data.entries[1].Time;
+  //   $description2.textContent = data.entries[1].Description;
+  // } else if ($time3.textContent !== null) {
+  //   $time3.textContent = data.entries[2].Time;
+  //   $description3.textContent = data.entries[2].Description;
+  // } else if ($time4.textContent !== null) {
+  //   $time4.textContent = data.entries[3].Time;
+  //   $description4.textContent = data.entries[3].Description;
+  // }
+
+  $entryForm.reset();
 }
 
 var $daysForm = document.querySelector('.days-buttons');
