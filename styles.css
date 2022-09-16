@@ -2,6 +2,10 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-family: sans-serif;
+}
+
 .button-flex {
   text-align: center;
 }
@@ -96,6 +100,18 @@ textarea {
   border: 3px solid black;
 }
 
+.schedule-h2 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.schedule-table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
 th {
   background-color: #ccc;
 }
@@ -106,4 +122,21 @@ tr:nth-child(odd) {
 
 table {
   border: 3px solid black;
+}
+
+td {
+  height: 20px;
+}
+
+th:first-child {
+  border-right: 3px solid black;
+}
+
+td:first-child {
+  border-right: 3px solid black;
+  width: 250px;
+}
+
+td:nth-child(2) {
+  width: 800px;
 }
