@@ -14,6 +14,11 @@ $entryForm.addEventListener('submit', handleEntrySubmit);
 function handleEntrySubmit(event) {
   event.preventDefault();
   $modal.className = 'overlay hidden';
+  var entryDay = {
+    Day: $entryForm.elements['day-of-week'].value,
+    Time: $entryForm.elements.time.value,
+    Description: $entryForm.elements.description.value
+  };
 }
 
 var $daysForm = document.querySelector('.days-buttons');

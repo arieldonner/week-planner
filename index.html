@@ -82,7 +82,7 @@
         <h1 class="modal-h1">Add Entry</h1>
         <form class="entry-form">
           <div class="dropdown-container">
-            <select name="day-of-week">
+            <select name="day-of-week" id="day-of-week">
               <option value="weekday">Day of Week</option>
               <option value="sunday">Sunday</option>
               <option value="monday">Monday</option>
@@ -92,7 +92,7 @@
               <option value="friday">Friday</option>
               <option value="saturday">Saturday</option>
             </select>
-            <select name="time">
+            <select name="time" id="time">
               <option value="time">Time</option>
               <option value="12">12:00</option>
               <option value="1">1:00</option>
@@ -109,7 +109,7 @@
             </select>
           </div>
           <div class="description-box">
-            <textarea name="description" cols="95" rows="7" placeholder="Description"></textarea>
+            <textarea name="description" cols="95" rows="7" placeholder="Description" id="description"></textarea>
           </div>
           <div class="submit-container row">
             <button type="submit" class="submit-btn">Submit</button>
@@ -119,5 +119,6 @@
     </div>
   </div>
   <script src="main.js"></script>
+  <script src="data.js"></script>
 </body>
 </html>
