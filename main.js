@@ -15,3 +15,27 @@ function handleEntrySubmit(event) {
   event.preventDefault();
   $modal.className = 'overlay hidden';
 }
+
+var $daysForm = document.querySelector('.days-buttons');
+$daysForm.addEventListener('click', handleClick);
+
+var $span = document.querySelector('span');
+
+function handleClick(event) {
+  event.preventDefault();
+  if (event.target.id === 'sunday') {
+    $span.textContent = 'Sunday';
+  } else if (event.target.id === 'monday') {
+    $span.textContent = 'Monday';
+  } else if (event.target.id === 'tuesday') {
+    $span.textContent = 'Tuesday';
+  } else if (event.target.id === 'wednesday') {
+    $span.textContent = 'Wednesday';
+  } else if (event.target.id === 'thursday') {
+    $span.textContent = 'Thursday';
+  } else if (event.target.id === 'friday') {
+    $span.textContent = 'Friday';
+  } else if (event.target.id === 'saturday') {
+    $span.textContent = 'Saturday';
+  }
+}
