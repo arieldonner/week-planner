@@ -1,0 +1,16 @@
+header {
+  text-align: center;
+}
+
+.button-flex {
+  text-align: center;
+}
+
+.add-btn {
+  padding: 0.75rem 4rem;
+  filter: drop-shadow(2.5px 2.5px 1px rgb(0, 0, 0));
+}
+
+.weekdays {
+
+}
