@@ -1,6 +1,21 @@
 // homepage with Weekly Planner title and center button
 //
 
+var data = {
+  entries: [],
+  editing: null,
+  nextEntryId: 1
+};
+
+var previousTodosJSON = localStorage.getItem('javascript-local-storage');
+data = JSON.parse(previousTodosJSON);
+
+window.addEventListener('beforeunload', function () {
+  var todosJSON = JSON.stringify(data);
+  localStorage.setItem('javascript-local-storage', todosJSON);
+}
+);
+
 var $addEntry = document.querySelector('.add-btn');
 var $modal = document.querySelector('.overlay');
 var $entryForm = document.querySelector('.entry-form');
@@ -17,8 +32,16 @@ function handleEntrySubmit(event) {
   var entryDay = {
     Day: $entryForm.elements['day-of-week'].value,
     Time: $entryForm.elements.time.value,
-    Description: $entryForm.elements.description.value
+    Description: $entryForm.elements.description.value,
+    EntryId: data.nextEntryId
   };
+
+  data.nextEntryId++;
+
+  console.log(entryDay);
+
+  // data.entries.push(entryDay);
+
 }
 
 var $daysForm = document.querySelector('.days-buttons');
