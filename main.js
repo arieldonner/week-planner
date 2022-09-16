@@ -38,11 +38,16 @@ function handleEntrySubmit(event) {
 
   data.nextEntryId++;
 
-  console.log(entryDay);
+  data.entries.push(entryDay);
 
-  // data.entries.push(entryDay);
-
+  if ($td1.textContent !== null) {
+    $td1.textContent = data.entries[0].Time;
+    $td2.textContent = data.entries[0].Description;
+  } else if ($td) { $entryForm.reset(); }
 }
+
+var $td1 = document.querySelector('.time1');
+var $td2 = document.querySelector('.desc1');
 
 var $daysForm = document.querySelector('.days-buttons');
 $daysForm.addEventListener('click', handleClick);
