@@ -12,22 +12,24 @@
     <h1>Weekly Planner</h1>
   </header>
   <div class="container">
-    <div class="weekdays row">
-      <button class="day-entry">Sunday</button>
-      <button class="day-entry">Monday</button>
-      <button class="day-entry">Tuesday</button>
-      <button class="day-entry">Wednesday</button>
-      <button class="day-entry">Thursday</button>
-      <button class="day-entry">Friday</button>
-      <button class="day-entry">Saturday</button>
-    </div>
+    <form>
+      <div class="weekdays row">
+        <button class="day-entry" id="sunday">Sunday</button>
+        <button class="day-entry" id="monday">Monday</button>
+        <button class="day-entry" id="tuesday">Tuesday</button>
+        <button class="day-entry" id="wednesday">Wednesday</button>
+        <button class="day-entry" id="thursday">Thursday</button>
+        <button class="day-entry" id="friday">Friday</button>
+        <button class="day-entry" id="saturday">Saturday</button>
+      </div>
+    </form>
     <div class="entry-btn">
       <button class="add-btn">Add Entry</button>
     </div>
   </div>
   <div class="schedule">
     <div>
-      <h2 class="schedule-h2">Scheduled Events for <span>Monday</span></h2>
+      <h2 class="schedule-h2">Scheduled Events for <span class="day">Monday</span></h2>
     </div>
     <div class="schedule-table">
       <table>
