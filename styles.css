@@ -10,6 +10,11 @@ h1 {
   text-align: center;
 }
 
+.entry-btn {
+  display: flex;
+  justify-content: center;
+}
+
 .add-btn {
   padding: 0.75rem 4rem;
   filter: drop-shadow(2.5px 2.5px 1px rgb(0, 0, 0));
@@ -30,6 +35,9 @@ h1 {
   margin: 50px;
   width: 101px;
   height: 95px;
+  flex-shrink: 0;
+
+  /* padding: 0 50px; */
 }
 
 .day-entry:hover {
@@ -122,6 +130,7 @@ tr:nth-child(odd) {
 
 table {
   border: 3px solid black;
+  border-spacing: 0;
 }
 
 td {
